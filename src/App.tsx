@@ -1,13 +1,18 @@
 import React from 'react';
-import Routes from './routes/Routes';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
+import Header from './components/NavBar/Header';
+import AppRoutes from './routes/Routes';
 
-const App: React.FC = () => {
+
+const App: React.FunctionComponent = () => {
     return (
-        <div>
-            <h1>My React Router App</h1>
-            <Routes />
-        </div>
+        <ErrorBoundary>
+            <AppRoutes>
+                <Header />
+            </AppRoutes>
+        </ErrorBoundary>
     );
 };
+
 
 export default App;
