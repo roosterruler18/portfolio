@@ -1,28 +1,21 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from '../pages/home/Home';
-import About from '../pages/about/About';
-import Services from '../pages/services/Services';
-import Contact from '../pages/contact/Contact';
-import Blog from '../pages/blog/Blog';
-import Portfolio from '../pages/portfolio/Portfolio';
-import { FC, PropsWithChildren } from 'react';
+// project imports
+import { lazy } from 'react';
+import { Navigate, RouteObject } from 'react-router-dom';
+import Layout from '../layout/layout';
 
-const AppRoutes: FC<PropsWithChildren> = props => {
-    return (
-        <BrowserRouter basename='/'>
-            <>{props.children}</>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
+// COLLABORATORS
+const HomePage = (lazy(() => import('../pages/home/Home')));
+// ==============================|| MAIN ROUTING ||============================== //
 
-        </BrowserRouter>
-    );
+const MainRoutes: RouteObject | any = {
+    path: '/',
+    element: (
+        <Layout />
+    ),
+    children: [
+        { path: '/', element: <HomePage />, index: true },
+        { path: '*', element: <Navigate to="/" replace /> }
+    ]
 };
 
-
-export default AppRoutes
+export default MainRoutes;
