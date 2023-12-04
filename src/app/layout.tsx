@@ -1,6 +1,8 @@
 import "./globals.sass";
-import Header from "@/components/navbar/Header";
-import Footer from "@/components/footer/Footer";
+import Header from "@/components/_navbar/Header";
+import Footer from "@/components/_footer/Footer";
+import { Providers } from "./providers";
+
 
 export const metadata = {
   title: "Rooster Ruler",
@@ -9,11 +11,13 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en'>
+    <html lang="en" className='dark'>
       <body>
         <Header />
         <main>
-          {children}
+          <Providers>
+            {children}
+          </Providers>
         </main>
         <Footer />
       </body>

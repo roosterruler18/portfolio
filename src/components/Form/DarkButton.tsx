@@ -13,7 +13,7 @@ export const DarkButton = ({ buttonClassName, text = "BUTTON", buttonLink }: Pro
         <Link
             className={`${buttonClassName}`}
             href={`${buttonLink}`}>
-            {text}
+            <p>{text}</p>
         </Link>
     );
 };
