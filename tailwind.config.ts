@@ -38,6 +38,7 @@ const config: Config = {
                     text_dark_gray: "rgba(57, 20, 0, 0.64)",
                     text_light_accent: "#EF6D58",
                     text_light_gray: "rgba(255, 255, 255, 0.64)",
+                    text_gray: "rgba(255, 255, 255, 0.3)",
                 },
                 secondary: {
                     F3D1BF: "#F3D1BF",

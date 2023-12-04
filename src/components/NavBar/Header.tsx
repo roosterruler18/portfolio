@@ -14,28 +14,28 @@ const navBar = [
 
 const Header = () => {
     return (
-        <header className='header w-full'>
+        <header className='header w-full py-4 bg-secondary-28293E'>
             <Container>
                 <div className="navBar flex items-center justify-between">
                     <a href="/" className="logo">
                         <Image
                             src="/logo.png"
                             alt=""
-                            width={300}
+                            width={170}
                             height={69}
                         />
                     </a>
                     <ul className="nav flex items-center gap-16">
                         {navBar.map((item) => (
                             <li className="nav-item" key={item.id}>
-                                <Link href={item.link} className='nav-link'>
+                                <Link href={item.link} className='nav-link text-white text-base'>
                                     {item.name}
                                 </Link>
                             </li>
                         ))}
 
                     </ul>
-                    <DarkButton text={'Contact'} buttonLink={'/contact'} buttonClassName={'btn btn-dark__button'} />
+                    <DarkButton text={'Contact'} buttonLink={'/contact'} buttonClassName={'btn btn-dark__button rounded-[6px] border border-primary-text_gray py-5 px-9 text-white text-sm font-black'} />
                 </div>
             </Container>
         </header>
