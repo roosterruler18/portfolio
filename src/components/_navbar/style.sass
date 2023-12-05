@@ -1,0 +1,13 @@
+.header
+    header
+        @apply px-[16px] h-auto
+        .nav-bar
+            .nav-item
+                .nav-link
+                    @apply relative whitespace-nowrap inline-block transition-all
+                    &::before
+                        content: attr(title)
+                        @apply block font-bold overflow-hidden h-0 invisible
+                &:hover
+                    .nav-link
+                        @apply font-bold
