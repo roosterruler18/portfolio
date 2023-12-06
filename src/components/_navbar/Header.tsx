@@ -38,7 +38,7 @@ const Header = () => {
                         ))}
                     </NavbarContent>
                     <NavbarContent justify="end" className='h-auto'>
-                        <DarkButton text={'Contact'} buttonLink={'/contact'} buttonClassName={'btn btn-dark__button flex items-center justify-center rounded-[6px] border border-primary-text_gray py-3 px-9 text-white font-black h-[49px] '} />
+                        <DarkButton text={'Contact'} className={'darkButton'} buttonClassName={'darkButtonText'} buttonLink={'/contact'} />
                     </NavbarContent>
                 </div>
             </div>
