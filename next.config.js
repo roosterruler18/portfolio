@@ -1,4 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
+// next.config.js
+module.exports = {
+    serverRuntimeConfig: {
+        PORT: process.env.PORT || 3001,
+    },
+};
