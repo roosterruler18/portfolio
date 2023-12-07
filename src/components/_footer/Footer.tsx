@@ -5,12 +5,13 @@ import Image from 'next/image';
 import { IconBrandFacebook, IconBrandInstagram, IconBrandTwitter } from '@tabler/icons-react';
 
 
+
 const Footer = () => {
     return (
         <footer className='py-7'>
             <div className="container">
-                <div className="grid grid-cols-4 gap-4 grid-rows-1">
-                    <div className="footer-item">
+                <div className="grid grid-cols-12 gap-4 grid-rows-1">
+                    <div className="footer-item text-center col-span-full sm:col-span-3">
                         <Link href={'/'}>
                             <Image src="/logo.png"
                                 alt=""
@@ -18,7 +19,7 @@ const Footer = () => {
                                 height={69} />
                         </Link>
                     </div>
-                    <div className="footer-item">
+                    <div className="footer-item col-span-6 sm:col-span-3">
                         <p className='text-base uppercase tracking-[3px] text-primary-text_dark--accent mb-4 font-medium'>Menu</p>
                         <ul className='flex flex-col gap-4'>
                             <li>
@@ -35,7 +36,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="footer-item">
+                    <div className="footer-item col-span-6 sm:col-span-3">
                         <p className='text-base uppercase tracking-[3px] text-primary-text_dark--accent mb-4 font-medium'>Service</p>
                         <ul className='flex flex-col gap-4'>
                             <li>
@@ -52,8 +53,8 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="footer-item">
-                        <ul className='flex items-center gap-4 justify-end'>
+                    <div className="footer-item col-span-full sm:col-span-3">
+                        <ul className='flex items-center gap-4 justify-center sm:justify-end'>
                             <li>
                                 <Link href={'/'} className='rounded-full w-[48px] h-[48px] bg-primary-text_dark--accent flex items-center justify-center'><IconBrandFacebook className='text-white' /></Link>
                             </li>
