@@ -22,13 +22,16 @@
         "next-auth": "^4.24.5",
         "react": "^18",
         "react-dom": "^18",
-        "sass": "^1.69.5"
+        "react-slick": "^0.29.0",
+        "sass": "^1.69.5",
+        "slick-carousel": "^1.8.1"
     },
     "devDependencies": {
         "@grafbase/sdk": "^0.11.0",
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
+        "@types/react-slick": "^0.23.12",
         "@typescript-eslint/eslint-plugin": "^6.13.2",
         "@typescript-eslint/parser": "^6.13.2",
         "autoprefixer": "^10.0.1",

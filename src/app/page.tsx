@@ -1,9 +1,9 @@
 import React from 'react'
-import Sec1 from './home/Sec-1/Sec-1'
+import HomePage from './home'
 
 const Home = () => {
     return (
-        <Sec1 />
+        <HomePage />
     )
 }
 

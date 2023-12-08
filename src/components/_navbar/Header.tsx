@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
+import { Navbar, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import Link from 'next/link';
 import { DarkButton } from '../Form/DarkButton';
 import ImageOptimize from '../imageOptimize/imageOptimize';
@@ -38,27 +38,31 @@ const Header = () => {
                             <ImageOptimize src='/logo.png' />
                         </Link>
                     </div>
-                    <NavbarContent className="hidden sm:flex gap-8" justify="start">
-                        <Link href={'/'} className='mr-auto'>
+                    <NavbarContent className="hidden sm:flex gap-8 nav-bar">
+                        <Link href={'/'}>
                             <ImageOptimize src='/logo.png' />
                         </Link>
-                        {navBar.map((item, index) => (
-                            <NavbarItem key={`${item}-${index}`}>
-                                <Link
-                                    className="w-full text-white"
-                                    href={item.link}
-                                >
-                                    {item.name}
-                                </Link>
-                            </NavbarItem>
-                        ))}
+                        <div className='mx-auto flex items-center gap-28'>
+                            {navBar.map((item, index) => (
+                                <NavbarItem key={`${item}-${index}`} className='nav-item'>
+                                    <Link
+                                        className="w-full text-white nav-link"
+                                        href={item.link}
+                                        title={item.name}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </NavbarItem>
+                            ))}
+                        </div>
                     </NavbarContent>
-                    <NavbarMenu className='navMobile gap-6 py-8'>
+                    <NavbarMenu className='navMobile gap-6'>
                         {navBar.map((item, index) => (
                             <NavbarMenuItem key={`${item}-${index}`} onClick={handleMenuClose}>
                                 <Link
                                     className="w-full text-2xl text-primary-text_light_accent"
                                     href={item.link}
+                                    title={item.name}
                                 >
                                     {item.name}
                                 </Link>
