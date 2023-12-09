@@ -1,6 +1,8 @@
-import ImageOptimize from '@/components/imageOptimize/imageOptimize';
-import { useState, useEffect } from 'react';
-import Slider from 'react-slick';
+"use client"
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
+
 
 const images = [
     { id: 1, src: '/icons/bitmap-1.svg', title: 'Slide 1' },
@@ -11,29 +13,26 @@ const images = [
 ]
 
 const Sec2 = () => {
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 5000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        cssEase: 'linear',
-        pauseOnHover: false,
-    };
     return (
         <section className='section heroCarouse'>
             <div className="container">
-                <Slider {...settings} className="w-full h-12 relative overflow-hidden whitespace-nowrap">
-                    {images.map((item, index) => (
-                        <div className='marqueeItem' key={item.id}>
-                            <ImageOptimize src={item.src} alt="Slide 1" />
-                        </div>
-                    ))}
-                </Slider>
+                <p>asdsdsd</p>
+                <Swiper
+                    modules={[Autoplay]}
+                    spaceBetween={24}
+                    slidesPerView={3}
+                    loop={true}
+                    loopAdditionalSlides={30}
+                >
+                    <SwiperSlide>
+                        1
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        2
+                    </SwiperSlide>
+                </Swiper>
             </div>
-        </section>
+        </section >
     )
 }
 
