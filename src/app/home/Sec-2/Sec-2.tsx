@@ -1,7 +1,6 @@
 "use client"
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
+import ImageOptimize from '@/components/imageOptimize/imageOptimize';
 
 
 const images = [
@@ -14,23 +13,17 @@ const images = [
 
 const Sec2 = () => {
     return (
-        <section className='section heroCarouse'>
-            <div className="container">
-                <p>asdsdsd</p>
-                <Swiper
-                    modules={[Autoplay]}
-                    spaceBetween={24}
-                    slidesPerView={3}
-                    loop={true}
-                    loopAdditionalSlides={30}
-                >
-                    <SwiperSlide>
-                        1
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        2
-                    </SwiperSlide>
-                </Swiper>
+        <section className='section heroLogo'>
+            <div className="container grid grid-cols-5 gap-4">
+                {
+                    images.map((item, index) => {
+                        return (
+                            <div className='logo-item flex items-center justify-center' key={item.id}>
+                                <ImageOptimize src={item.src} alt={item.title} />
+                            </div>
+                        )
+                    })
+                }
             </div>
         </section >
     )
