@@ -1,4 +1,5 @@
 // fonts
+import React from 'react';
 import { Sora } from '@next/font/google';
 
 // font settings
@@ -13,7 +14,7 @@ import Nav from './Nav';
 import Header from './Header';
 import TopLeftImg from './TopLeftImg';
 
-const Layout = ({ children }: any) => {
+const Layout = ({ children }) => {
   return (
     <div
       className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
