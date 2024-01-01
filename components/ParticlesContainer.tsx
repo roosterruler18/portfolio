@@ -90,6 +90,8 @@ const ParticlesContainer: FC = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={particlesOptions}
+      width='100vw'
+      height='100vh'
     />
   );
 };
