@@ -1,10 +1,6 @@
-// next image
+import React from 'react';
 import Image from 'next/image';
-
-// next link
 import Link from 'next/link';
-
-// icons
 import { HiArrowRight } from 'react-icons/hi2';
 
 const ProjectsBtn = () => {
@@ -21,10 +17,12 @@ const ProjectsBtn = () => {
           alt=''
           className='animate-spin-slow w-full h-full max-w-[141px] max-h-[148px]'
         />
-        <HiArrowRight className='absolute text-4xl group-hover:translate-x-2 transition-all duration-300' />
+        {/* <HiArrowRight className='absolute text-4xl group-hover:translate-x-2 transition-all duration-300' /> */}
+        <HiArrowRight />
       </Link>
     </div>
   );
 };
 
 export default ProjectsBtn;
+

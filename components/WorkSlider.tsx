@@ -1,5 +1,5 @@
 // work slider data
-export const workSlider = {
+export const workSlider: { slides: { images: { title: string; path: string; }[]; }[]; } = {
   slides: [
     {
       images: [
@@ -44,6 +44,8 @@ export const workSlider = {
   ],
 };
 
+import React from 'react'
+
 // import swiper react components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -57,6 +59,7 @@ import { Pagination } from 'swiper';
 
 // icons
 import { BsArrowRight } from 'react-icons/bs';
+
 // next image
 import Image from 'next/image';
 
@@ -113,3 +116,5 @@ const WorkSlider = () => {
 };
 
 export default WorkSlider;
+
+

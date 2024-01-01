@@ -1,18 +1,16 @@
+import React from 'react'
 // next image
 import Image from 'next/image';
-
 // components
 import ParticlesContainer from '../components/ParticlesContainer';
 import ProjectsBtn from '../components/ProjectsBtn';
 import Avatar from '../components/Avatar';
-
 // framer motion
 import { motion } from 'framer-motion';
-
 // variants
 import { fadeIn } from '../variants';
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <div className='bg-primary/60 h-full'>
       {/* text */}
@@ -64,7 +62,7 @@ const Home = () => {
         <ParticlesContainer />
         {/* avatar img */}
         <motion.div
-          variants={fadeIn('up', 0.5)}
+          variants={fadeIn('up', 0.3)}
           initial='hidden'
           animate='show'
           exit='hidden'
@@ -79,3 +77,5 @@ const Home = () => {
 };
 
 export default Home;
+
+

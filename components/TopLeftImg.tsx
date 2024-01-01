@@ -1,4 +1,4 @@
-// next image
+import React from 'react'
 import Image from 'next/image';
 
 const TopLeftImg = () => {
@@ -10,3 +10,5 @@ const TopLeftImg = () => {
 };
 
 export default TopLeftImg;
+
+

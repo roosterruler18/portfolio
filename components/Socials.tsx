@@ -1,6 +1,6 @@
+import React from 'react';
 // links
 import Link from 'next/link';
-
 // icons
 import {
   RiYoutubeLine,
@@ -37,3 +37,5 @@ const Socials = () => {
 };
 
 export default Socials;
+
+
