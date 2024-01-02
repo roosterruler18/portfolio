@@ -11,14 +11,14 @@ module.exports = {
   theme: {
     container: {
       padding: {
-        DEFAULT: '15px',
+        DEFAULT: '12px',
       },
     },
     screens: {
       sm: '640px',
-      md: '768px',
-      lg: '960px',
-      xl: '1200px',
+      md: '960px',
+      lg: '1024px',
+      xl: '1320px',
     },
     extend: {
       colors: {

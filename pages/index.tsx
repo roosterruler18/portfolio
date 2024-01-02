@@ -33,11 +33,9 @@ const Home: React.FC = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
+            className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 line-clamp-3'
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            nostrum quam reprehenderit vero, tenetur voluptatem nulla aut
-            aspernatur dolores ut.
+            Turn ideas into digital reality effortlessly with our innovative solutions where creativity meets cutting-edge technology for seamless transformation.
           </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>
